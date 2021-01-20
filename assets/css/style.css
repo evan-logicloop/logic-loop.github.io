@@ -154,6 +154,30 @@ p {
     color: #fff;
     background-position: right center; }
 
+  .side-btn {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0 25px;
+    font-size: 22px;
+    line-height: 60px;
+    border-radius: 8px;
+    border: 0;
+    color: #000;
+    cursor: pointer;
+    background-color: #fff;
+    z-index: 5;
+    background-size: 200%; }
+    .side-btn:hover {
+      color: #999;
+      background-position: right center; }
+
 /*===== All SECTION TITLE Style =====*/
 .section-title .line {
   background: -webkit-linear-gradient(#fe8464 0%, #fe6e9a 100%);
