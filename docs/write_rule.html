@@ -6,7 +6,7 @@
 
     <meta property="og:title" content="Empower your operations team with Logic Loop" /> 
     <meta property="og:description" content="SQL select, then act | Simple rules to alert, automate or review. Get clarity, control and experiment on business workflows, without engineers."/> 
-    <meta property="og:image" content="https://logic-loop.github.io/assets/images/logicloop-landing.png" /> 
+    <meta property="og:image" content="https://logic-loop.github.io/../assets/images/logicloop-landing.png" /> 
 
     <!--====== Title ======-->
     <title>Logic Loop</title>
@@ -15,22 +15,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/png">
         
     <!--====== Animate CSS ======-->
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
                 
     <!--====== Line Icons CSS ======-->
-    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
+    <link rel="stylesheet" href="../assets/css/LineIcons.2.0.css">
         
     <!--====== Bootstrap CSS ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap-4.5.0.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-4.5.0.min.css">
     
     <!--====== Default CSS ======-->
-    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/default.css">
     
     <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     
 </head>
 
@@ -46,8 +46,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="assets/images/logic-loop-logo.svg" alt="Logo">
+                            <a class="navbar-brand-docs" href="../index.html">
+                                <img src="../assets/images/logic-loop-logo.svg" alt="Logo">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>
@@ -79,7 +79,7 @@
             <div class="container" style="padding-top: 80px">
                 <div class="row pt-5">
                     <div class="col-lg-12">
-                        <h1 style="color: #FFFFFF">User Guide</h1>
+                        <h1 style="color: #FFFFFF">Write a Rule</h1>
                     </div>
                 </div>
             </div> <!-- container -->
@@ -87,67 +87,39 @@
     </section>
     
 
-    
-   
-    <!--====== ABOUT PART ENDS ======-->
 
     <section id="library" class="about-area pt-70">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="section-title">
-                        <div class="video-content mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <img class="dots" src="assets/images/dots.svg" alt="dots">
-                        <div class="video-wrapper">
-                            <div class="video-image">
-                                <img src="assets/images/video.png" alt="video">
-                            </div>
-                            <div class="video-icon">
-                                <a href="https://www.youtube.com/watch?v=r44RKWyfcFw" target="_blank" class="video-popup"><i class="lni lni-play"></i></a>
-                            </div>
-                        </div>
-                    </div> 
-                    </div> 
+                <div class="col-12">
+                     <p class="text">
+                        You’ll write rules to manage your business processes with LogicLoop. Before you write a rule, make sure to <a href="./connecting_data.html">connect some data sources</a>.<br><br>
+
+                        Navigate to the <b>Rules</b> tab. Here you see a listing of all existing Rules with useful metadata and the status of their last runs.<br><br>
+
+                        
+                        <img src="../assets/images/docs/rules-list.png"><br><br>
+
+                        Click <b>‘+ New Rule’</b> to start writing a rule query<br>
+                        <ul>
+                            <li>• Add a <b>Name</b></li>
+                            <li>• Select a connected data source and search the schema</li>
+                            <li>• Write your SQL query, click <b>‘View Results’</b> to check it looks good, and <b>‘Save’</b>. You can make changes and re-run to fine-tune your results.</li>
+                            <li>• </b>Publish</b> your rule.</li> 
+                            <li>• (Optional) Add <b>Tags</b>, a <b>Rule Description</b> and other helpful documentation</li>
+                            <li>• (Optional) You can run your rule on a <b>Schedule</b>. We support <b>‘Never’</b>, <b>‘Minutes’</b> (1-30), <b>‘Hours’</b>, <b>‘Days’</b>, <b>‘Weeks’</b></li>
+                        </ul><br><br>
+
+                        <img src="../assets/images/docs/query-rule.png"><br><br>
+
+                        You can run this rule as-is, but you’ll want to <a href="./trigger_action.html">set up alerts and actions next</a>.
+
+                    </p>
                 </div>
-                <div class="col-md-8">
-                    <h2 class="title">Write your first rule in 10 minutes</h2><br><br>
-                        Getting started with LogicLoop is easy:<br><br>
-                        1. Connect your data source. View list of supported data sources here.<br>
-                        2. Write a SQL query to express your rule.<br>
-                        3. Add an action to be conditionally triggered by the query results.<br>
-                        4. Optionally, set your rule to be run on a recurring schedule.<br>
-                        <a href="https://www.loom.com/share/57006a1065244589beec80fb890b0dc8" class="main-btn mt-40"  target="_blank">Quickstart Tutorial</a>
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-        <div class="about-shape-1">
-            <img src="assets/images/about-shape-1.svg" alt="shape">
-        </div>
-    </section>
-
-    <section id="library" class="about-area pt-70">
-        <div class="container">
-            <div class="row">
-                <h2 class="title">Queries</h2><br><br>
             </div>
         </div>
     </section>
 
-    <section id="library" class="about-area pt-70">
-        <div class="container">
-            <div class="row">
-                <h2 class="title">Actions</h2><br><br>
-            </div>
-        </div>
-    </section>
-
-    <section id="library" class="about-area pt-70">
-        <div class="container">
-            <div class="row">
-                <h2 class="title">Data Sources</h2><br><br>
-            </div>
-        </div>
-    </section>
     
     <!--====== FOOTER PART START ======-->
     
@@ -175,7 +147,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div class="footer-about mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                             <a class="logo" href="#">
-                                <img src="assets/images/logic-loop-logo.svg" alt="logo">
+                                <img src="../assets/images/logic-loop-logo.svg" alt="logo">
                             </a>
                             <p class="text">Based in San Francisco</p>
                             <p class="text"><a href="https://getlogicloop.medium.com/" target="_blank" style="color: #fff">Read our Blog</a></p>
@@ -237,38 +209,38 @@
 
 
     <!--====== Jquery js ======-->
-    <script src="assets/js/vendor/jquery-3.5.1-min.js"></script>
-    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
-    <script src="assets/js/splide.min.js"></script>
+    <script src="../assets/js/vendor/jquery-3.5.1-min.js"></script>
+    <script src="../assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="../assets/js/splide.min.js"></script>
 
     
     <!--====== Bootstrap js ======-->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap-4.5.0.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap-4.5.0.min.js"></script>
     
     <!--====== Plugins js ======-->
-    <script src="assets/js/plugins.js"></script>
+    <script src="../assets/js/plugins.js"></script>
     
     <!--====== Counter Up js ======-->
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="../assets/js/waypoints.min.js"></script>
+    <script src="../assets/js/jquery.counterup.min.js"></script>
     
 
     
     <!--====== Scrolling Nav js ======-->
-    <script src="assets/js/jquery.easing.min.js"></script>
-    <script src="assets/js/scrolling-nav.js"></script>
+    <script src="../assets/js/jquery.easing.min.js"></script>
+    <script src="../assets/js/scrolling-nav.js"></script>
     
     <!--====== wow js ======-->
-    <script src="assets/js/wow.min.js"></script>
+    <script src="../assets/js/wow.min.js"></script>
     
     <!--====== Particles js ======-->
-    <script src="assets/js/particles.min.js"></script>
+    <script src="../assets/js/particles.min.js"></script>
     
     <!--====== Main js ======-->
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 
-    <link rel="stylesheet" href="assets/css/splide.min.css">
+    <link rel="stylesheet" href="../assets/css/splide.min.css">
     <script>
         new Splide( '.splide' ).mount();
     </script>

@@ -14,9 +14,11 @@ $(function () {
         if (scroll < 20) {
             $(".navbar-area").removeClass("sticky");
             $(".navbar .navbar-brand img").attr("src", "assets/images/logic-loop-logo.svg");
+            $(".navbar .navbar-brand-docs img").attr("src", "../assets/images/logic-loop-logo.svg");
         } else {
             $(".navbar-area").addClass("sticky");
             $(".navbar .navbar-brand img").attr("src", "assets/images/logic-loop-logo-2.svg");
+            $(".navbar .navbar-brand-docs img").attr("src", "../assets/images/logic-loop-logo-2.svg");
         }
     });
 
