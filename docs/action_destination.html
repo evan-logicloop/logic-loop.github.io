@@ -79,7 +79,7 @@
             <div class="container" style="padding-top: 80px">
                 <div class="row pt-5">
                     <div class="col-lg-12">
-                        <h2 class="header-title" style="color: #FFFFFF">Add Actions</h1>
+                        <h2 class="header-title" style="color: #FFFFFF">Add Action Destinations</h1>
                     </div>
                 </div>
             </div> <!-- container -->
@@ -93,37 +93,64 @@
             <div class="row">
                 <div class="col-12">
                      <p class="text">
-                        LogicLoop lets you run your rules on a schedule and set up automated actions. No need to spend time manually refreshing dashboards or exporting data.<br><br>
+                        In LogicLoop, you can add Action Destinations to configure where your actions should be taken. This is where your rule’s query results will be forwarded to.<br><br>
 
-                        You can use actions to raise alerts to monitor your processes, or integrate your rules into downstream workflows like Zapier or even custom internal flows. You can set up actions <a href="./write_rule.html">after every scheduled rule</a>.<br><br>
+                        You can add a new Action Destination from the Destinations tab. We currently support email, Slack alerts, PagerDuty alerts, or hitting a custom API endpoint (this can be an internal API endpoint to trigger custom actions in your system, or an external API endpoint like Zapier to trigger additional workflows).<br><br>
 
-                        Note: Actions don’t work on rules that have parameters.<br><br>
+                        <img src="../assets/images/docs/new-action-destination.png" width="600"><br><br>
 
-                        You can add an action to your rule by clicking the <b>‘+ Add Action’</b> button in the Rule source view.<br><br>
+                        Once you’ve set up an Action Destination, <a href="./write_rule.html">you can integrate it into an action of a rule by following these steps</a>.<br><br>
 
-                        <img src="../assets/images/docs/add-action.png" width="600"><br><br>
+                        <h2 class="title">Email</h2><br>
 
-                        Now you can configure your new action<br>
-                        <ul>
-                            <li>• <b>Name</b></li>
-                            <li>• <b>Trigger when</b> Add a condition for your action to be triggered. Currently, the condition is based on the first row. Set the condition to an impossible value to always run the action.</li>
-                            <li>• <b>When triggered, send</b> Configure how often you want the Action to be triggered. We support ‘Just once’, ‘Each time action is evaluated’, ‘At most every…’</li>
-                            <li>• <b>Template</b> Customize what data is passed into the action, or use our default. <a href="reference_list.html#action-params">See the full list of action parameters here.</a></li>
-                        </ul><br><br>
+                        To have your rule send you an email, just set the name and email address, and optionally a subject template.<br><br>
 
-                        <img src="../assets/images/docs/new-action.png" width="600"><br><br>
+                        <img src="../assets/images/docs/email-setup.png" width="600"><br><br>
 
-                        Once you click <b>‘Create Action’</b>, you’ll be able to add your existing <b>Action Destinations</b> to the action. <a href="./action_destination.html">Learn how to set up Action Destinations here.</a><br><br>
+                        <h2 class="title">Slack</h2><br>
 
-                        <img src="../assets/images/docs/edit-action.png" width="600"><br><br>
+                        To have your rule ping a Slack channel, just set the name, channel, and provide a “Slack Webhook URL”, <a href="https://my.slack.com/services/new/incoming-webhook/" target="_blank">which you can create here</a>.<br><br>
 
-                        Click <b>‘+ Add’</b> to add any action destinations configured in the <b>Destinations</b> tab. As the rule author, you can opt to be notified too.<br><br>
+                        <img src="../assets/images/docs/slack-channel.png" width="600"><br><br>
 
-                        <img src="../assets/images/docs/action-destination.png" width="600"><br><br>
+                        Once you select a channel and click <b>‘Add Incoming WebHooks integration’</b>, you can copy the Slack Webhook URL.<br><Br>
 
-                        You can now click <b>‘Run Rule Now’</b> to test your actions. The status of your action on the right bar will change from <b>‘Unknown’</b> to <b>‘Triggered’</b> or <b>‘Not Triggered’</b>. You’ll want to ensure your rule’s query runs correctly before triggering the action.
+                        <img src="../assets/images/docs/slack-url.png" width="600"><br><br>
+
+                        You add this new destination for any alert that you want to be sent to this Slack channel.<br><br>
+
+                        <img src="../assets/images/docs/slack-config.png" width="600"><br><br>
 
 
+                        <h2 class="title">Webhook (Zapier Example)</h2><br>
+
+                        You can also set up the action to call any custom API endpoint, internal or external. In this example, we retrieve a webhook endpoint from Zapier so that our LogicLoop rule can trigger a Zap.<br><br>
+
+                        First, create a Zap in Zapier that is triggered by “Webhooks by Zapier.”<br><br>
+
+                        <img src="../assets/images/docs/zapier/new-trigger.png" width="600"><br><br>
+
+                        Then choose the event ‘Catch Hook’<br><br>
+
+                        <img src="../assets/images/docs/zapier/catch-hook.png" width="600"><br><br>
+
+                        <img src="../assets/images/docs/zapier/catch-hook-url.png" width="600"><br><br>
+
+                        Copy and paste the "Custom Webhook URL" to get your custom endpoint. Create an action destination in LogicLoop of type Webhook and put in the URL you copied from Zapier.<br><br>
+
+                        <img src="../assets/images/docs/zapier/new-zapier.png" width="600"><br><br>
+
+                        You will want to run your rule to test that the endpoint is being hit properly. Then, you can go into Zapier and add whatever action you would like Zapier to take when it's triggered. For example, you can have Zapier create a new Google Sheets row with the data from your LogicLoop query.<br><br>
+
+                        <img src="../assets/images/docs/zapier/new-google-sheets.png" width="600"><br><br>
+
+                        You will have to do some mapping to ensure the data passed from LogicLoop is in the format you want to be passed into the Zapier action.<br><br>
+
+                        <img src="../assets/images/docs/zapier/transform.png" width="600"><br><br>
+
+                        With Zapier you can set up your LogicLoop queries to trigger any number of actions such as creating Google Docs, Sheets, Calendars, Forms, creating Trello/JIRA tasks, posting to social media, syncing to Dropbox, Salesforce, Mailchimp, and many more. <a href="https://zapier.com/apps" target="_blank">You can explore all Zapier integrations here</a>.<br><br>
+
+                        In this example we used Zapier as the webhook endpoint being hit, but you can trigger any system that exposes an API!
                     </p>
                 </div>
             </div>
