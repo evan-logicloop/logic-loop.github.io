@@ -94,9 +94,17 @@
                 <div class="col-12">
                      <p class="text">
                         <a href="../docs.html">Docs Home</a><br><br>
-                        
+
+                        <h2 class="title">Writing rules on JSON based data</h2><br>
+                        You can add a JSON-based data source by following the <a href="../connecting_data.html">Connecting a Data source guide</a>. To write a rule on a JSON-based source, you will need the URL and optional parameters to access nested objects. For example, this is the Github API response.<br>
+                        <img src="../assets/images/docs/json-response.png" width="600"><br><br>    
+                        Here's how we'd write a rule that accesses the `user` object from the API response.
+                        <img src="../assets/images/docs/json-rule.png" width="600"><br><br>  
+
                         <h2 class="title">Querying existing rules</h2><br>
-                        Sometimes you want to do analytics on top of your rule results, or to combine data stored in separate databases. In LogicLoop, you can create rules from the results of other rules. LogicLoop stores the latest result from each rule’s queries in an in-memory database.<br><br>
+                        Sometimes you want to do analytics on top of your rule results, or to combine data stored in separate databases. In LogicLoop, you can create rules from the results of other rules. LogicLoop stores the latest result from each rule’s queries in an in-memory database.<br>
+
+                        You can see a video example of how to combine different rules <a href="https://www.loom.com/share/7a5aef2dfc394cc3a4e71179ba2a6545">here</a>.<br><br>
 
                         Note: LogicLoop cannot query rules that use parameters. You’ll see ‘Error running query: Failed loading results from query id xx’. You can remove parameters to fix this issue.<br><br>
 
