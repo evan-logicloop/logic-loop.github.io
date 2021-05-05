@@ -79,7 +79,7 @@
             <div class="container" style="padding-top: 80px">
                 <div class="row pt-5">
                     <div class="col-lg-12">
-                        <h2 class="header-title" style="color: #FFFFFF">Reference List</h1>
+                        <h2 class="header-title" style="color: #FFFFFF">Action Template</h1>
                     </div>
                 </div>
             </div> <!-- container -->
@@ -87,63 +87,59 @@
     </section>
     
 
-
-    <section id="data-sources" class="about-area pt-70">
+    <section id="action-params" class="about-area pt-70">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                      <p class="text">
                         <a href="../docs.html">Docs Home</a><br><br>
-                        <h2 class="title">Supported Data Sources</h2><br>
-                        <a href="./connecting_data.html">See detailed instructions on how to add a new data source here.</a><br><br>
-                        Amazon Athena<br>
-                        Amazon CloudWatch<br>
-                        Amazon CloudWatch Logs Insights<br>
-                        Amazon Elasticsearch Service<br>
-                        Apache Drill<br>
-                        Azure Data Explorer (Kusto)<br>
-                        BigQuery<br>
-                        CockroachDB<br>
-                        Couchbase<br>
-                        Databricks<br>
-                        Dgraph<br>
-                        Druid<br>
-                        DynamoDB (with DQL)<br>
-                        Elasticsearch<br>
-                        Google Analytics<br>
-                        Google Sheets<br>
-                        Graphite<br>
-                        Hive<br>
-                        Hive (HTTP)<br>
-                        Impala<br>
-                        InfluxDB<br>
-                        JIRA (JQL)<br>
-                        JSON<br>
-                        Kibana<br>
-                        MemSQL<br>
-                        Microsoft SQL Server<br>
-                        Microsoft SQL Server (ODBC)<br>
-                        MongoDB<br>
-                        MySQL<br>
-                        MySQL (Amazon RDS)<br>
-                        PostgreSQL<br>
-                        Presto<br>
-                        Prometheus<br>
-                        Qubole<br>
-                        Query Results<br>
-                        Redshift<br>
-                        Redshift (with IAM User/Role)<br>
-                        Salesforce<br>
-                        Snowflake<br>
-                        Sqlite<br>
-                        TreasureData<br>
-                        Vertica<br>
+                        
+                        You can create custom action notification templates by using these parameters within curly braces. (You may also choose not to create your own template and just leave all the configuration fields blank, in which case we will send over the default system template.)<br><br>
+
+                        ACTION_URL - The action page url (string)<br>
+                        RULE_URL - The corresponding rule page url (string)<br>
+                        ROWS - The rule query result data (JSON array)<br><br>
+
+                        If your action is configured to raise a notification for each indvidual row returned, you will also have access to these additional parameters:<br><br>
+                        ROW - Data of the specific row returned (JSON dict)<br>
+                        ROW_[COLUMN_NAME] - The specific value of that column in that row (string)<br><br>
+
+                        The following examples operate against a query that returned results with this structure:<br>
+                        <img src="../assets/images/docs/templates/rule_result.png"><br><br>
+                        <br><br>
+
+                        <h2 class="title">Slack</h2><br>
+
+                        Here's an example of a template we can configure on Slack:<br>
+                        <img src="../assets/images/docs/templates/slack_template.png" width="600"><br><br>
+
+                        Here's what the result would look like:<br>
+                        <img src="../assets/images/docs/templates/slack_result.png" width="600"><br><br>
+
+                        <h2 class="title">Email</h2><br>
+ 
+                        Here's an example of a template we can configure on Email:<br>
+                        <img src="../assets/images/docs/templates/email_template.png" width="600"><br><br>
+
+                        Here's what the result would look like:<br>
+                        <img src="../assets/images/docs/templates/email_result.png" width="800"><br><br>
+
+                        <h2 class="title">Webhook</h2><br>
+                        Here's an example of a template we can configure on Webhook:<br>
+                        <img src="../assets/images/docs/templates/webhook_template.png" width="600"><br><br>
+
+                        Here's what the request would look like:<br>
+                        <img src="../assets/images/docs/templates/webhook_result.png" width="600"><br><br>
+
+                        Note that the headers and body fields must be valid JSON. The header fields that you enter in the header section will be appended to default headers that are automatically sent, such as the authorization token (which you set when you <a href="./action_destination.html">created the action destination</a>). We also set the default to "content-type":"application/json", but you may override this by entering "content-type": "application/x-www-form-urlencoded" in the headers if you wish to use URL encoded format instead. Header keys and values must be strings in double quotes -- as you can see in the example, you need to specify "{{ ROW_EMAIL }}" not just {{ ROW_EMAIL }}. The body must also be valid JSON format but can take nested JSON values as well. Note that in the example we write "Data": {{ ROW }}, instead of "Data": "{{ ROW }}" because {{ ROW }} is a valid JSON structure.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
+
+    
     <!--====== FOOTER PART START ======-->
     
     <footer id="footer" class="footer-area pt-120">
