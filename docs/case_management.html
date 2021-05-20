@@ -79,7 +79,7 @@
             <div class="container" style="padding-top: 80px">
                 <div class="row pt-5">
                     <div class="col-lg-12">
-                        <h2 class="header-title" style="color: #FFFFFF">Add Actions</h1>
+                        <h2 class="header-title" style="color: #FFFFFF">Case Management</h1>
                     </div>
                 </div>
             </div> <!-- container -->
@@ -95,36 +95,35 @@
                      <p class="text">
                         <a href="../docs.html">Docs Home</a><br><br>
                         
-                        LogicLoop lets you run your rules on a schedule and set up automated actions. No need to spend time manually refreshing dashboards or exporting data.<br><br>
+                        LogicLoop lets you create, assign, triage, and archive tickets so you can manage your outstanding alerts.<br><br>
 
-                        You can use actions to raise alerts to monitor your processes, or integrate your rules into downstream workflows like Zapier or even custom internal flows. You can set up actions <a href="./write_rule.html">after every scheduled rule</a>.<br><br>
+                        First, click on the ‘Queue‘ tab to see a list of all your tickets. If you want to manually create a ticket, you can click on the ‘+ New Ticket‘ button and fill out the information for your ticket.<br><br>
 
-                        Note: Actions don’t work on rules that have parameters.<br><br>
+                        <img src="../assets/images/docs/queue/new-ticket.png" width="800"><br><br>
 
-                        You can add an action to your rule by clicking the <b>‘+ Add Action’</b> button in the Rule source view.<br><br>
+                        You can click on a ticket's name to view or edit it. You can edit its name, description, assignee, notes, and tags.<br><br>
 
-                        <img src="../assets/images/docs/add-action.png" width="600"><br><br>
+                        <img src="../assets/images/docs/queue/edit-ticket.png" width="800"><br><br>
 
-                        Now you can configure your new action<br>
-                        <ul>
-                            <li>• <b>Name</b></li>
-                            <li>• <b>Trigger</b> Trigger an action once per row returned, or once for the entire result set.</li>
-                            <li>• <b>Condition</b> Add a condition for your action to be triggered. Currently, the condition is based on the first row. Set the condition to an impossible value to always run the action.</li>
-                        </ul><br><br>
+                        You can also share a link to a ticket by copy & pasting its URL e.g. https://yourco.getlogicloop.com/tickets?ticket_id=1<br><br>
 
-                        <img src="../assets/images/docs/new-action.png" width="600"><br><br>
+                        To mark a ticket as complete, you can click the ‘Archive‘ button in the bottom right corner. Archived tickets can still be found under the Archived tab.<br><br>
 
-                        Once you click <b>‘Create Action’</b>, you’ll be able to add your existing <b>Action Destinations</b> to the action. <a href="./action_destination.html">Learn how to set up Action Destinations here.</a><br><br>
+                        <img src="../assets/images/docs/queue/archived-tickets.png" width="800"><br><br>
 
-                        <img src="../assets/images/docs/edit-action.png" width="600"><br><br>
+                        You can attach tags to tickets for easy filtering. For example, you may want to create tags for different types of cases e.g. suspicious activity vs revenue growth. You may also want to create tags for different stages of review e.g. new, pending review, collecting information, approved or rejected.<br><br>
 
-                        Click <b>‘+ Add’</b> to add any subscriptions for actions configured in the <b>Destinations</b> tab. You can <a href="action_template.html">customize and templatize each <b>Action Subscription</b></a> if you'd like or leave the options blank to trigger the defaults. As the rule author, you can opt to be notified too.<br><br>
+                        <img src="../assets/images/docs/queue/tags.png" width="800"><br><br>
 
-                        <img src="../assets/images/docs/action-destination.png" width="600"><br><br>
+                        You can also view all tickets assigned to you under the ‘My Tickets‘ tab on the right. Tickets can also be searched by name and description.<br><br>
 
-                        You can now click <b>‘Run Rule Now’</b> to test your actions. The status of your action on the right bar will change from <b>‘Unknown’</b> to <b>‘Triggered’</b> or <b>‘Not Triggered’</b>. You’ll want to ensure your rule’s query runs correctly before triggering the action.
+                        Finally, you can set up your rules to automatically generate tickets when an action is triggered. All you have to do is <a href="../docs/trigger_action.html">create an action</a> that adds a new ticket to your queue. You can either create 1 ticket every time the rule is triggered, or a separate ticket for each individual row returned from the rule run. The new ticket will be pre-populated with information you configure and will automatically attach the associated data from your rule run. <a href="action_template.html">Click here to learn how to templatize fields.</a><br><br>
 
+                        <img src="../assets/images/docs/queue/add-sub.png" width="800"><br><br>
 
+                        <img src="../assets/images/docs/queue/queue-subscription.png" width="800"><br><br>
+
+                        <img src="../assets/images/docs/queue/generated-ticket.png" width="800"><br><br>
                     </p>
                 </div>
             </div>
