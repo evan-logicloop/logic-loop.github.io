@@ -123,6 +123,8 @@
                         Here's an example of a template we can configure on Email:<br>
                         <img src="../assets/images/docs/templates/email_template.png" width="600"><br><br>
 
+                        If you leave the "To:" field blank it will default to the "To:" field you configured in your action destination. Otherwise, you can override that configuration by specifying a recipient here. You can either hardcode the recipient e.g. To: hi@getlogicloop.com, or you can encode a recipient e.g. {{ ROW_EMAIL }} so that emails get sent to different addresses per row returned from your rule. This comes in handy, for example, if your rule pulled up a list of emails for customers you wanted to contact and you want to send an email to each one. You can also specify multiple recipients by separating them with a comma e.g. one@gmail.com, two@gmail.com<br><br>
+
                         Here's what the result would look like:<br>
                         <img src="../assets/images/docs/templates/email_result.png" width="800"><br><br>
 
