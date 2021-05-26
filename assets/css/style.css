@@ -87,7 +87,12 @@ h2 {
   font-size: 36px; }
 
 h3 {
-  font-size: 28px; }
+  font-size: 28px; 
+  color:#361CC1; }
+
+.use-case {
+  color: #2E2E2E;
+}
 
 h4 {
   font-size: 22px; }
